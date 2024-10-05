@@ -7,8 +7,17 @@ function handleComplete() {
   const singleTasks = document.querySelectorAll("p");
 
   checkbox.forEach(function (v, i) {
-    v.addEventListener("change", function (e) {
+    v.addEventListener("change", function () {
       singleTasks[i].classList.toggle("lined");
+    });
+  });
+}
+function handleDelete() {
+  const toDelete = document.querySelectorAll(".delete");
+  const singleTask = document.querySelectorAll(".single-task");
+  toDelete.forEach(function (v, i) {
+    v.addEventListener("click", function () {
+      singleTask[i].remove();
     });
   });
 }
@@ -26,7 +35,9 @@ form.addEventListener("submit", function (e) {
                 <img src="./images/icon-cross.svg" alt="icon-cross" />
               </button>
             </div>`;
+
   tasksWrap.innerHTML += tasks;
   addTaskIn.value = "";
   handleComplete();
+  handleDelete();
 });
