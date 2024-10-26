@@ -10,7 +10,7 @@ class Menu extends Component {
           this.props.isOpen ? "open-menu" : "close-menu"
         }`}
       >
-        <button>
+        <button onClick={() => this.props.setIsOpen()}>
           {" "}
           <img src={close} alt="" />{" "}
         </button>
@@ -40,6 +40,9 @@ export class Navbar extends Component {
   state = {
     menu: false,
   };
+  setIsOpen = () => {
+    this.setState((prev) => ({ ...prev, menu: !prev.menu }));
+  };
   render() {
     return (
       <nav>
@@ -52,7 +55,7 @@ export class Navbar extends Component {
         >
           <img src={menuIcon} alt="menu" />
         </button>
-        <Menu isOpen={this.state.menu} />
+        <Menu isOpen={this.state.menu} setIsOpen={this.setIsOpen} />
       </nav>
     );
   }
