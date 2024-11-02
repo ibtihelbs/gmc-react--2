@@ -6,15 +6,25 @@ import Filters from "./components/Filters";
 
 const App = () => {
   const [tasksArr, setTasksArr] = useState([]);
+  const [filter, setFilter] = useState("all");
+
   return (
     <div className="center">
       <ThemeSwicher />
       <main>
-        <Addtask />
+        <Addtask setTasksArr={setTasksArr} />
         <section id="tasks-management">
-          <TasksWrap />
+          <TasksWrap
+            filter={filter}
+            tasksArr={tasksArr}
+            setTasksArr={setTasksArr}
+          />
           <hr />
-          <Filters/>
+          <Filters
+            setFilter={setFilter}
+            setTasksArr={setTasksArr}
+            tasksArr={tasksArr}
+          />
         </section>
       </main>
     </div>

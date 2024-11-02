@@ -1,10 +1,31 @@
 import { useState } from "react";
-const Addtask = () => {
-  const [task, setTask] = useState({});
+const Addtask = ({ setTasksArr }) => {
+  const [task, setTask] = useState("");
+  const generateKey = () => {
+    return `${new Date().getTime()}`;
+  };
   return (
-    <form className="flex">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        setTasksArr((prev) => [
+          ...prev,
+          { task, done: false, id: generateKey() },
+        ]);
+        setTask("");
+      }}
+      className="flex"
+    >
       <span></span>
-      <input type="text" id="add" placeholder="Create new todo ...." />
+      <input
+        onChange={(e) => {
+          setTask(e.target.value);
+        }}
+        type="text"
+        id="add"
+        placeholder="Create new todo ...."
+        value={task}
+      />
     </form>
   );
 };
