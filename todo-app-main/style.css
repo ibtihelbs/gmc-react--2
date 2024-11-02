@@ -15,7 +15,7 @@
   --Hover: hsl(236, 33%, 92%);
   --Active-filter: hsl(234, 11%, 52%);
   --Inactive-filter: hsl(233, 14%, 35%);
-  --Underline: hsl(237, 14%, 26%);
+  --Underline: hsla(237, 14%, 26%, 0.034);
   --bg-img: url(./images/bg-desktop-dark.jpg);
 }
 .light-theme {
@@ -27,11 +27,13 @@
 
   /*./images/bg-desktop-light.jpg*/
 }
-body {
+.wrap {
   background-image: var(--bg-img);
   background-repeat: no-repeat;
   background-color: var(--Body-BG);
   color: var(--Text);
+  width: 100v;
+  height: 100vh;
   font-size: 12px;
 }
 h1 {
