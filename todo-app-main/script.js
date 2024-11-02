@@ -13,19 +13,7 @@ const displayTasks = (arr) => {
   const display = arr
     .map((v) => {
       const { task, done } = v;
-      return `<div class="single-task flex between">
-              <div class="flex">
-                <form class="checked">
-                  <input type="checkbox" ${
-                    done ? "checked" : ""
-                  } class="state" />
-                </form>
-                <p ${done ? "class='lined'" : ""} >${task} </p>
-              </div>
-              <button class="delete">
-                <img src="./images/icon-cross.svg" alt="icon-cross" />
-              </button>
-            </div>`;
+      return ``;
     })
     .join("");
   tasksWrap.innerHTML = display;
