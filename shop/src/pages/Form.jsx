@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-const Form = ({ setCount, count }) => {
+const Form = () => {
   const [inputs, setInputs] = useState({
     title: "",
     price: 0,
@@ -9,7 +9,6 @@ const Form = ({ setCount, count }) => {
   const postFn = async (e) => {
     e.preventDefault();
     await axios.post("http://localhost:3000/products", inputs);
-    setCount(count + 1);
     setInputs({
       title: "",
       price: 0,

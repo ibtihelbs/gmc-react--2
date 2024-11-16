@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 const Post = ({ v, count, setCount }) => {
   const { title, price, id, description } = v;
   const deleteFn = async () => {
@@ -11,7 +12,10 @@ const Post = ({ v, count, setCount }) => {
   };
   return (
     <div className="rounded-md p4 border border-solid grid gap-2">
-      <button onClick={deleteFn}>x</button>
+      <div className="flex justify-between">
+        <Link to={`/singleproduct/${id}`}> details </Link>
+        <button onClick={deleteFn}>x</button>
+      </div>
       <h1>{title}</h1>
       <h2> {price} </h2>
       <p> {description} </p>
