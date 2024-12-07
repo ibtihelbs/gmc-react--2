@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+.Restock {
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+}
+.Buy {
+  background-color: green;
+  width: 100vw;
+  height: 100vh;
+}

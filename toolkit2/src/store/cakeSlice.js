@@ -5,6 +5,7 @@ const cakeSlice = createSlice({
   initialState: {
     numberOfCakes: 0,
     profit: 100,
+    className: "Restock",
   },
   reducers: {
     buyCake: (state, action) => {
@@ -15,8 +16,11 @@ const cakeSlice = createSlice({
       state.numberOfCakes += action.payload.number;
       state.profit -= action.payload.price * action.payload.number;
     },
+    setTheme: (state, action) => {
+      state.className = action.payload ? "Buy" : "Restock";
+    },
   },
 });
 
-export const { buyCake, restockCake } = cakeSlice.actions;
+export const { buyCake, restockCake, setTheme } = cakeSlice.actions;
 export default cakeSlice.reducer;
