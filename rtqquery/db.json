@@ -1,0 +1,67 @@
+{
+  "cart": [
+    {
+      "id": 4,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png",
+      "title": "Red Lipstick",
+      "price": 12.99,
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png",
+      "title": "Red Nail Polish",
+      "price": 8.99,
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png",
+      "title": "Red Lipstick",
+      "price": 12.99,
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png",
+      "title": "Powder Canister",
+      "price": 14.99,
+      "quantity": 1
+    },
+    {
+      "id": 14,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/thumbnail.png",
+      "title": "Knoll Saarinen Executive Conference Chair",
+      "price": 499.99,
+      "quantity": 1
+    },
+    {
+      "id": 15,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/thumbnail.png",
+      "title": "Wooden Bathroom Sink With Mirror",
+      "price": 799.99,
+      "quantity": 1
+    },
+    {
+      "id": 17,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Beef%20Steak/thumbnail.png",
+      "title": "Beef Steak",
+      "price": 12.99,
+      "quantity": 1
+    },
+    {
+      "id": 19,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/thumbnail.png",
+      "title": "Chicken Meat",
+      "price": 9.99,
+      "quantity": 1
+    },
+    {
+      "id": 20,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/thumbnail.png",
+      "title": "Cooking Oil",
+      "price": 4.99,
+      "quantity": 1
+    }
+  ]
+}

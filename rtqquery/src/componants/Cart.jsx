@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 const singleItem = () => {
   return (
     <div className="singleItem">
@@ -11,6 +12,10 @@ const singleItem = () => {
   );
 };
 const Cart = () => {
+  const cart = useSelector((f) => f.cart);
+  const { data, loading, error } = cart;
+  if (loading) return <h1> Loading..</h1>;
+  if (error) return <h1> andek mochkol..</h1>;
   return (
     <div
       className="cart"
@@ -24,7 +29,17 @@ const Cart = () => {
         borderRadius: "15px",
       }}
     >
-      <h1>cart is empty</h1>
+      {data.length !== 0 ? (
+        data.map((v) => (
+          <div>
+            <h1> {v.title} </h1>
+            <img src={v.thumbnail} alt="ff" />
+            <span> {v.quantity} </span> <span> {v.price} </span>
+          </div>
+        ))
+      ) : (
+        <h1>cart is empty</h1>
+      )}
     </div>
   );
 };

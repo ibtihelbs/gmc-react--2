@@ -1,7 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../store/api";
 const Products = () => {
   const [data, setData] = useState(null);
+  const dispatch = useDispatch();
   const getdata = async () => {
     const res = await axios.get("https://dummyjson.com/products");
     setData(res.data);
@@ -9,7 +12,7 @@ const Products = () => {
   useEffect(() => {
     getdata();
   }, []);
-  console.log(data);
+
   return (
     <div>
       <h1>products</h1>
@@ -31,7 +34,15 @@ const Products = () => {
                 <img src={thumbnail} alt={title} />
                 <h3>{title}</h3>
                 <h1>{price}</h1>
-                <button>cart</button>
+                <button
+                  onClick={() => {
+                    dispatch(
+                      addToCart({ id, thumbnail, title, price, quantity: 1 })
+                    );
+                  }}
+                >
+                  cart
+                </button>
               </div>
             );
           })
